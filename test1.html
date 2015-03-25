@@ -30,13 +30,14 @@ img.onload = function() {
 }
 */
 function displayTestGrid(context) {
-	for (var i = 0; i < canvasWidth; i+=50) {
+	var offset = 50;
+	for (var i = 0; i < canvasWidth; i+=offset) {
 		context.beginPath();
 		context.moveTo(i,0);
 		context.lineTo(i,canvasHeight);
 		context.stroke();
 	}
-	for (var i = 0; i < canvasHeight; i+=50) {
+	for (var i = 0; i < canvasHeight; i+=offset) {
 		context.beginPath();
 		context.moveTo(0,i);
 		context.lineTo(canvasWidth,i);
@@ -57,6 +58,14 @@ $.get('canvas.txt', function(data) {
 	console.log(locations);	
 });
 
+function drawLocation(context) {
+	context.fillStyle = "#FF0000";
+	context.fillRect(100,100,10,10);
+}
+
+$('.left-panel ul li').click(function() {
+	drawLocation(ctx);
+});
 
 displayTestGrid(ctx);
 
