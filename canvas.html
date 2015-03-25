@@ -1,0 +1,63 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="left-panel">
+		<ul>
+			<li>LEFT</li>
+		</ul>
+	</div>
+	<div class="right-panel">
+		<ul>
+			<li>RIGHT</li>
+		</ul>
+	</div>
+	<canvas id="canvas" width="940" height="1024" style="border: solid black 1px"></canvas>
+</body>
+</html>
+<script>
+var canvas = $("#canvas")[0];
+var ctx = canvas.getContext("2d");
+var canvasWidth = $("#canvas").attr('width');
+var canvasHeight = $("#canvas").attr('height');
+
+var img = new Image();
+img.onload = function() {
+	ctx.drawImage(img,0,0,canvasWidth,canvasHeight);
+}
+
+function displayTestGrid(context) {
+	for (var i = 0; i < canvasWidth; i+=50) {
+		context.beginPath();
+		context.moveTo(i,0);
+		context.lineTo(i,canvasHeight);
+		context.stroke();
+	}
+	for (var i = 0; i < canvasHeight; i+=50) {
+		context.beginPath();
+		context.moveTo(0,i);
+		context.lineTo(canvasWidth,i);
+		context.stroke();
+	}
+}
+
+// Not difficult to do using jinja, but for the purposes of this demo, 
+// we will fetch database information from a txt file.
+$.get('canvas.txt', function(data) {
+	locations = data.split('\n');
+	for (var i = 0; i < locations.length - 1; i++) {
+		if (i < (locations.length - 1) / 2)
+			$('.left-panel ul').append('<li>'+locations[i]+'</li>');
+		else
+			$('.right-panel ul').append('<li>'+locations[i]+'</li>');
+	}
+	console.log(locations);	
+});
+
+img.src = 'canvas.png';
+
+displayTestGrid(ctx);
+
+</script>
