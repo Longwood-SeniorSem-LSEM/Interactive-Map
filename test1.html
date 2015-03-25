@@ -14,7 +14,7 @@
 			<li>RIGHT</li>
 		</ul>
 	</div>
-	<canvas id="canvas" width="940" height="1024" style="border: solid black 1px"></canvas>
+	<canvas id="canvas" width="940" height="1024" style="background: url('canvas.png');"></canvas>
 </body>
 </html>
 <script>
@@ -22,13 +22,13 @@ var canvas = $("#canvas")[0];
 var ctx = canvas.getContext("2d");
 var canvasWidth = $("#canvas").attr('width');
 var canvasHeight = $("#canvas").attr('height');
-
+/*
 var img = new Image();
 img.src = 'canvas.png';
 img.onload = function() {
 	ctx.drawImage(img,0,0,canvasWidth,canvasHeight);
 }
-
+*/
 function displayTestGrid(context) {
 	for (var i = 0; i < canvasWidth; i+=50) {
 		context.beginPath();
