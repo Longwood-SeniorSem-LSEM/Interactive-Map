@@ -50,9 +50,9 @@ $.get('canvas.txt', function(data) {
 	locations = data.split('\n');
 	for (var i = 0; i < locations.length - 1; i++) {
 		if (i < (locations.length - 1) / 2)
-			$('.left-panel ul').append('<li>'+locations[i]+'</li>');
+			$('.left-panel ul').append('<li name="'+locations[i]+'">'+locations[i]+'</li>');
 		else
-			$('.right-panel ul').append('<li>'+locations[i]+'</li>');
+			$('.right-panel ul').append('<li name="'+locations[i]+'">'+locations[i]+'</li>');
 	}
 	console.log(locations);	
 });
