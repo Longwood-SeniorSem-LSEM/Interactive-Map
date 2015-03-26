@@ -44,26 +44,27 @@ function displayTestGrid(context) {
 		context.stroke();
 	}
 }
-
+var locations = Array()
 // Not difficult to do using jinja, but for the purposes of this demo, 
 // we will fetch database information from a txt file.
 $.get('canvas.txt', function(data) {
 	locations = data.split('\n');
 	for (var i = 0; i < locations.length - 1; i++) {
 		if (i < (locations.length - 1) / 2)
-			$('.left-panel ul').append('<li name="'+locations[i]+'">'+locations[i]+'</li>');
-		else
-			$('.right-panel ul').append('<li name="'+locations[i]+'">'+locations[i]+'</li>');
+			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i]+'</li>');
+		//else
+		//	$('.right-panel ul').append('<li name="'+locations[i]+'">'+locations[i]+'</li>');
 	}
 	console.log(locations);	
 });
 
-function drawLocation(context) {
-	context.fillStyle = "#FF0000";
-	context.fillRect(100,100,10,10);
+function drawLocation(index) {
+	console.log('Drawing Location for ' + locations[index]);
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(100,100,100,100);
 }
 
-$('.left-panel ul li').click(function() {
+$('.left-panel ul li').click(function(e) {
 	drawLocation(ctx);
 });
 
