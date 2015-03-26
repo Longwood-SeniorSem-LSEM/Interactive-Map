@@ -1,6 +1,7 @@
 <!DOCTYPE html5>
 <html>
 <head>
+	<link rel="stylesheet" type="type/css" href="map.css">
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -9,25 +10,29 @@
 			<li>LEFT</li>
 		</ul>
 	</div>
+	<canvas id="canvas" width="940" height="1024" style="background: url('canvas.png');"></canvas>
+	<!--
 	<div class="right-panel">
 		<ul>
 			<li>RIGHT</li>
 		</ul>
 	</div>
-	<canvas id="canvas" width="940" height="1024" style="background: url('canvas.png');"></canvas>
+	-->
 </body>
 </html>
+
 <script>
 var canvas = $("#canvas")[0];
 var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
-var canvasWidth = $("#canvas").attr('width');
-var canvasHeight = $("#canvas").attr('height');
+var canvasWidth = 940;//$("#canvas").attr('width');
+var canvasHeight = 1024;//$("#canvas").attr('height');
 
 var img = new Image();
 img.src = 'canvas.png';
 img.onload = function() {
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
+	drawTestGrid(ctx);
 }
 
 var Place = function(name,x,y) {
@@ -36,7 +41,7 @@ var Place = function(name,x,y) {
 	this.y = y;
 }
 
-function displayTestGrid(context) {
+function drawTestGrid(context) {
 	var offset = 50;
 	for (var i = 0; i < canvasWidth; i+=offset) {
 		context.beginPath();
@@ -51,7 +56,9 @@ function displayTestGrid(context) {
 		context.stroke();
 	}
 }
-var locations = Array()
+
+var locations = Array();
+
 // Not difficult to do using jinja, but for the purposes of this demo, 
 // we will fetch database information from a txt file.
 $.get('canvas.txt', function(data) {
@@ -62,16 +69,22 @@ $.get('canvas.txt', function(data) {
 
 		if (i < (tuples.length - 1) / 2)
 			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
-		else
-			$('.right-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
+/*		else
+			$('.right-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');*/
 	}
 	console.log(locations);	
 });
 
+function clearScreen(context) {
+	context.fillStyle = "#FFFFFF";
+	context.fillRect(0,0,canvasWidth, canvasHeight);
+}
+
 function drawLocation(index) {
 	console.log('Drawing Location for ' + locations[index].name);
+	clearScreen(ctx);
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
-	displayTestGrid(ctx);
+	drawTestGrid(ctx);
 	ctx.fillStyle = "#FF0000";
 	ctx.fillRect(locations[index].x,locations[index].y,25,25);
 }
@@ -79,7 +92,4 @@ function drawLocation(index) {
 $('.left-panel ul li').click(function(e) {
 	drawLocation(ctx);
 });
-
-//displayTestGrid(ctx);
-
 </script>

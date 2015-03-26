@@ -1,0 +1,37 @@
+.left-panel {
+	float: left;
+}
+
+.right-panel {
+	float: right;
+}
+
+.left-panel,
+.right-panel {
+	position: relative;
+	display: inline;
+}
+
+.left-panel ul,
+.right-panel ul {
+	list-style-type: none;
+}
+
+.left-panel ul li,
+.right-panel ul li {
+}
+
+.left-panel ul li:hover,
+.right-panel ul li:hover {
+	cursor: pointer;
+	color: red;
+}
+
+canvas#canvas {
+	padding: 0 0 0 0;
+	position: relative;
+	display: inline;
+	margin: 0 auto;
+	width: 940px;
+	height: 1024px;
+}
