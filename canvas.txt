@@ -1,11 +1,11 @@
-Admissions Office (Crafts House)
-Assessment & Institutional Research 
-Athletic Department (Tabb Hall)
-Barlow Hall 
-Baseball Field (Buddy Bolding Stadium) 
-Bedford Hall 
-Blackwell Hall
-Bristow Hall
+Admissions Office (Crafts House)|350|825
+Assessment & Institutional Research|465|250
+Athletic Department (Tabb Hall)|200|700
+Barlow Hall (Registrar)|250|600 
+Baseball Field (Buddy Bolding Stadium)|400|150 
+Bedford Hall|400|325
+Blackwell Hall|310|660
+Bristow Hall|200|425
 Campus Bookstore/Barnes & Noble
 Center for Communication Studies & Theatre
 Chichester Science Center

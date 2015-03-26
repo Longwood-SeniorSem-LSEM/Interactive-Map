@@ -19,16 +19,23 @@
 </html>
 <script>
 var canvas = $("#canvas")[0];
+var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
 var canvasWidth = $("#canvas").attr('width');
 var canvasHeight = $("#canvas").attr('height');
-/*
+
 var img = new Image();
 img.src = 'canvas.png';
 img.onload = function() {
-	ctx.drawImage(img,0,0,canvasWidth,canvasHeight);
+	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 }
-*/
+
+var Place = function(name,x,y) {
+	this.name = name;
+	this.x = x;
+	this.y = y;
+}
+
 function displayTestGrid(context) {
 	var offset = 50;
 	for (var i = 0; i < canvasWidth; i+=offset) {
@@ -48,26 +55,31 @@ var locations = Array()
 // Not difficult to do using jinja, but for the purposes of this demo, 
 // we will fetch database information from a txt file.
 $.get('canvas.txt', function(data) {
-	locations = data.split('\n');
-	for (var i = 0; i < locations.length - 1; i++) {
-		if (i < (locations.length - 1) / 2)
-			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i]+'</li>');
-		//else
-		//	$('.right-panel ul').append('<li name="'+locations[i]+'">'+locations[i]+'</li>');
+	var tuples = data.split('\n');
+	for (var i = 0; i < tuples.length - 1; i++) {
+
+		locations.push(new Place(tuples[i].split('|')[0],tuples[i].split('|')[1],tuples[i].split('|')[2]));
+
+		if (i < (tuples.length - 1) / 2)
+			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
+		else
+			$('.right-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
 	}
 	console.log(locations);	
 });
 
 function drawLocation(index) {
-	console.log('Drawing Location for ' + locations[index]);
+	console.log('Drawing Location for ' + locations[index].name);
+	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
+	displayTestGrid(ctx);
 	ctx.fillStyle = "#FF0000";
-	ctx.fillRect(100,100,100,100);
+	ctx.fillRect(locations[index].x,locations[index].y,25,25);
 }
 
 $('.left-panel ul li').click(function(e) {
 	drawLocation(ctx);
 });
 
-displayTestGrid(ctx);
+//displayTestGrid(ctx);
 
 </script>
