@@ -1,5 +1,7 @@
 .left-panel {
 	float: left;
+	height: 1024px;
+	overflow: auto;
 }
 
 .right-panel {

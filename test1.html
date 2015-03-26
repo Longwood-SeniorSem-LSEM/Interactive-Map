@@ -33,6 +33,7 @@ var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
 var canvasWidth = 940;//$("#canvas").attr('width');
 var canvasHeight = 1024;//$("#canvas").attr('height');
+var gridOn = false;
 
 var img = new Image();
 img.src = 'canvas.png';
@@ -48,18 +49,20 @@ var Place = function(name,x,y) {
 }
 
 function drawTestGrid(context) {
-	var offset = 50;
-	for (var i = 0; i < canvasWidth; i+=offset) {
-		context.beginPath();
-		context.moveTo(i,0);
-		context.lineTo(i,canvasHeight);
-		context.stroke();
-	}
-	for (var i = 0; i < canvasHeight; i+=offset) {
-		context.beginPath();
-		context.moveTo(0,i);
-		context.lineTo(canvasWidth,i);
-		context.stroke();
+	if (gridOn) {
+		var offset = 50;
+		for (var i = 0; i < canvasWidth; i+=offset) {
+			context.beginPath();
+			context.moveTo(i,0);
+			context.lineTo(i,canvasHeight);
+			context.stroke();
+		}
+		for (var i = 0; i < canvasHeight; i+=offset) {
+			context.beginPath();
+			context.moveTo(0,i);
+			context.lineTo(canvasWidth,i);
+			context.stroke();
+		}
 	}
 }
 
