@@ -1,28 +1,43 @@
 Admissions Office (Crafts House)|350|825
+Arc Residence Hall|585|360
 Assessment & Institutional Research|465|250
 Athletic Department (Tabb Hall)|200|700
 Barlow Hall (Registrar)|250|600 
 Baseball Field (Buddy Bolding Stadium)|400|150 
-Bedford Hall|400|325
+Bedford Hall|435|323
 Blackwell Hall|310|660
 Bristow Hall|200|425
-Campus Bookstore/Barnes & Noble
-Center for Communication Studies & Theatre
-Chichester Science Center
-Colonnade (Joanie on the Pony)
-Cormier Honors College (Wheeler Hall)
-Coyner Hall
-Crafts House
-Dorrill Dining Hall
-First Avenue Field
-Graham Hall
-Grainger Hall
-Greenwood Library
-Hardy House
-Health & Fitness Center
-Heating Plant
-Hiner Hall
-Hull Education Center
-Iler Hall
-Jarman Hall
-Lancaster Hall
+Center for Communication Studies & Theatre|400|275
+Chichester Science Center|650|700
+Cormier Honors College (Wheeler Hall)|675|625
+Coyner Hall|375|530
+Cox Residence Hall|650|560
+Crafts House|350|825
+Curry Residence Hall|250|325
+Dorrill Dining Hall|360|460
+Frazer Residence Hall|260|275
+French Hall(HelpDesk)|135|700
+Graham Hall|290|575
+Grainger Hall|395|675
+Greenwood Library|475|375
+Hardy House|265|825
+Health & Fitness Center|310|250
+Heating Plant|200|565
+Hiner Hall|375|550
+Hull Education Center|350,290
+Iler Hall|265|460
+Jarman Hall|580|705
+Lancaster Hall|485|690
+Lankford Student Union|450|465
+Ruffner Hall|310|700
+Small Business Development Center|275|225
+Souther Ruffner Residence Hall|255|660
+Stubbs Residence Hall|615|460
+Jeffers/Stevens/McCorkle Halls|600|575
+Longwood Bed And Breckfast|880|725
+Visitor Parking|325|820
+Wheeler Residence Hall|675|625
+Willet Hall|355|340
+Wygal Hall|450|325
+
+
