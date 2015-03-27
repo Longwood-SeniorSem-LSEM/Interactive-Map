@@ -25,7 +25,7 @@ Health & Fitness Center|310|250
 Heating Plant|200|565
 Hiner Hall|375|550
 Hull Education Center|350,290
-Iler Hall|265|460
+Iler Hall|360|495
 Jarman Hall|580|705
 Lancaster Hall|485|690
 Lankford Student Union|450|465
