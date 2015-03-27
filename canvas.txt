@@ -4,7 +4,7 @@ Assessment & Institutional Research|465|245
 Athletic Department (Tabb Hall)|200|664
 Barlow Hall (Registrar)|240|600 
 Baseball Field (Buddy Bolding Stadium)|400|150 
-Bedford Hall|653|700
+Bedford Hall|465|285
 Blackwell Hall|310|645
 Bristow Hall|203|420
 Center for Communication Studies & Theatre|440|270
