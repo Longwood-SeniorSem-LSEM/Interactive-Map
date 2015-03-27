@@ -1,7 +1,8 @@
 .left-panel {
 	float: left;
-	height: 1024px;
-	overflow: auto;
+	height: 800px;
+	overflow: scroll;
+	background-color: #FFFFFF;
 }
 
 .right-panel {
@@ -36,4 +37,14 @@ canvas#canvas {
 	margin: 0 auto;
 	width: 940px;
 	height: 1024px;
+	border: solid black 1px;
+}
+
+.panel-container {
+	background-color: #012169;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	height: 840px;
 }

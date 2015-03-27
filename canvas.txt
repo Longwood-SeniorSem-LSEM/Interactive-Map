@@ -39,5 +39,3 @@ Visitor Parking|325|820
 Wheeler Residence Hall|675|625
 Willet Hall|355|340
 Wygal Hall|450|325
-
-

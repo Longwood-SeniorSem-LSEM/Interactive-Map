@@ -8,9 +8,11 @@
 	<table>
 	<tr>
 	<td>
-	<div class="left-panel">
-		<ul>
-		</ul>
+	<div class="panel-container">
+		<div class="left-panel">
+			<ul>
+			</ul>
+		</div>
 	</div>
 	</td>
 	<td>
@@ -36,7 +38,9 @@ var canvasHeight = 1024;//$("#canvas").attr('height');
 var gridOn = false;
 
 var img = new Image();
+var cursor = new Image();
 img.src = 'canvas.png';
+cursor.src = 'cursor.png'; 
 img.onload = function() {
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawTestGrid(ctx);
@@ -95,7 +99,8 @@ function drawLocation(index) {
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawTestGrid(ctx);
 	ctx.fillStyle = "#FF0000";
-	ctx.fillRect(locations[index].x,locations[index].y,25,25);
+	ctx.drawImage(cursor,locations[index].x - 12,locations[index].y - 25,50,50);
+	//ctx.fillRect(locations[index].x,locations[index].y,25,25);
 }
 
 $('.left-panel ul li').click(function(e) {
