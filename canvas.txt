@@ -1,41 +1,39 @@
-Admissions Office (Crafts House)|350|825
-Arc Residence Hall|585|360
-Assessment & Institutional Research|465|250
-Athletic Department (Tabb Hall)|200|700
-Barlow Hall (Registrar)|250|600 
+Admissions Office (Crafts House)|357|810
+Arc Residence Hall|583|350
+Assessment & Institutional Research|465|245
+Athletic Department (Tabb Hall)|200|664
+Barlow Hall (Registrar)|240|600 
 Baseball Field (Buddy Bolding Stadium)|400|150 
-Bedford Hall|435|323
-Blackwell Hall|310|660
-Bristow Hall|200|425
-Center for Communication Studies & Theatre|400|275
-Chichester Science Center|650|700
-Cormier Honors College (Wheeler Hall)|675|625
-Coyner Hall|375|530
-Cox Residence Hall|650|560
-Crafts House|350|825
-Curry Residence Hall|250|325
-Dorrill Dining Hall|360|460
-Frazer Residence Hall|260|275
-French Hall(HelpDesk)|135|700
-Graham Hall|290|575
-Grainger Hall|395|675
-Greenwood Library|475|375
-Hardy House|265|825
-Health & Fitness Center|310|250
-Heating Plant|200|565
-Hiner Hall|375|550
-Hull Education Center|350,290
-Iler Hall|360|495
-Jarman Hall|580|705
-Lancaster Hall|485|690
-Lankford Student Union|450|465
-Ruffner Hall|310|700
-Small Business Development Center|275|225
-Souther Ruffner Residence Hall|255|660
-Stubbs Residence Hall|615|460
-Jeffers/Stevens/McCorkle Halls|600|575
-Longwood Bed And Breckfast|880|725
-Visitor Parking|325|820
-Wheeler Residence Hall|675|625
-Willet Hall|355|340
-Wygal Hall|450|325
+Bedford Hall|653|700
+Blackwell Hall|310|645
+Bristow Hall|203|420
+Center for Communication Studies & Theatre|440|270
+Chichester Science Center|653|700
+Cormier Honors College (Wheeler Hall)|677|612
+Coyner Hall|377|530
+Cox Residence Hall|650|540
+Curry Residence Hall|250|315
+Dorrill Dining Hall|350|450
+Frazer Residence Hall|255|270
+French Hall(HelpDesk)|133|680
+Graham Hall|285|565
+Grainger Hall|392|675
+Greenwood Library|472|360
+Hardy House|265|812
+Health & Fitness Center|310|230
+Heating Plant|200|550
+Hiner Hall|377|570
+Hull Education Center|355|282
+Iler Hall|360|475
+Jarman Hall|580|695
+Lancaster Hall|483|670
+Lankford Student Union|450|455
+Ruffner Hall|310|670
+Small Business Development Center|280|219
+Souther Ruffner Residence Hall|254|650
+Stubbs Residence Hall|619|450
+Jeffers/Stevens/McCorkle Halls|593|560
+Longwood Bed And Breckfast|883|697
+Visitor Parking|330|810
+Willet Hall|357|335
+Wygal Hall|435|305
