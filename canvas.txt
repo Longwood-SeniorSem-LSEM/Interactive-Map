@@ -1,39 +1,39 @@
-Admissions Office (Crafts House)|357|810|Campus_Buildings/crafts.jpg
-Arc Residence Hall|583|350|Campus_Buildings/arc.jpg
-Assessment & Institutional Research|465|245|Campus_Buildings/Assessment.jpg
-Athletic Department (Tabb Hall)|200|664|Campus_Buildings/tabb.jpg
-Barlow Hall (Registrar)|240|600|Campus_Buildings/barlow.jpg
-Baseball Field (Buddy Bolding Stadium)|400|150|Campus_Buildings/buddyboldingstadium.jpg
-Bedford Hall|465|285|Campus_Buildings/bedford.jpg
-Blackwell Hall|310|645|Campus_Buildings/blackwell.jpg
-Bristow Hall|203|420|Campus_Buildings/bristow.jpg
-Center for Communication Studies & Theatre|440|270|Campus_Buildings/communications.jpg
-Chichester Science Center|653|700|Campus_Buildings/chichester.jpg
-Cormier Honors College (Wheeler Hall)|677|612|Campus_Buildings/wheeler.jpg
-Coyner Hall|377|530|Campus_Buildings/coyner.jpg
-Cox Residence Hall|650|540|Campus_Buildings/cox.jpg
-Curry Residence Hall|250|315|Campus_Buildings/curry.jpg
-Dorrill Dining Hall|350|450|Campus_Buildings/dorrill.jpg
-Frazer Residence Hall|255|270|Campus_Buildings/frazer.jpg
-French Hall(HelpDesk)|133|680|Campus_Buildings/french.jpg
-Graham Hall|285|565|Campus_Buildings/graham.jpg
-Grainger Hall|392|675|Campus_Buildings/grainger.jpg
-Greenwood Library|472|360|Campus_Buildings/greenwood.jpg
-Hardy House|265|812|Campus_Buildings/hardy.jpg
-Health & Fitness Center|310|230|Campus_Buildings/fitness.jpg
-Heating Plant|200|550|Campus_Buildings/heatplant.jpg
-Hiner Hall|377|570|Campus_Buildings/hiner.jpg
-Hull Education Center|355|282|Campus_Buildings/hull.jpg
-Iler Hall|360|475|Campus_Buildings/iler.jpg
-Jarman Hall|580|695|Campus_Buildings/jarman.jpg
-Lancaster Hall|483|670|Campus_Buildings/lancaster.jpg
-Lankford Student Union|450|455|Campus_Buildings/lankford.jpg
-Ruffner Hall|310|670|Campus_Buildings/ruffner.jpg
-Small Business Development Center|280|219|Campus_Buildings/business.jpg
-Souther Ruffner Residence Hall|254|650|Campus_Buildings/southruffner.jpg
-Stubbs Residence Hall|619|450|Campus_Buildings/stubbs.jpg
-Jeffers/Stevens/McCorkle Halls|593|560|Campus_Buildings/jeffersmccorkle.jpg
-Longwood Bed And Breckfast|883|697|Campus_Buildings/longwoodinn.jpg
-Visitor Parking|330|810|Campus_Buildings/ruffner.jpg
-Willet Hall|357|335|Campus_Buildings/willett.jpg
-Wygal Hall|435|305|Campus_Buildings/wygal.jpg
+Crafts House|357|810|crafts.jpg|Admissions Office
+Arc Residence Hall|583|350|arc.jpg|Student Housings
+Assessment & Institutional Research|465|245|Assessment.jpg|NULL
+Tabb Hall|200|664|tabb.jpg|Athletic Department
+Registrar|240|600|barlow.jpg|Registrar
+Baseball Field (Buddy Bolding Stadium)|400|150|buddyboldingstadium.jpg|Baseball Field
+Bedford Hall|465|285|bedford.jpg
+Blackwell Hall|310|645|blackwell.jpg
+Bristow Hall|203|420|bristow.jpg
+Center for Communication Studies & Theatre|440|270|communications.jpg
+Chichester Science Center|653|700|chichester.jpg
+Cormier Honors College (Wheeler Hall)|677|612|wheeler.jpg
+Coyner Hall|377|530|coyner.jpg
+Cox Residence Hall|650|540|cox.jpg
+Curry Residence Hall|250|315|curry.jpg
+Dorrill Dining Hall|350|450|dorrill.jpg
+Frazer Residence Hall|255|270|frazer.jpg
+French Hall(HelpDesk)|133|680|french.jpg
+Graham Hall|285|565|graham.jpg
+Grainger Hall|392|675|grainger.jpg
+Greenwood Library|472|360|greenwood.jpg
+Hardy House|265|812|hardy.jpg
+Health & Fitness Center|310|230|fitness.jpg
+Heating Plant|200|550|heatplant.jpg
+Hiner Hall|377|570|hiner.jpg
+Hull Education Center|355|282|hull.jpg
+Iler Hall|360|475|iler.jpg
+Jarman Hall|580|695|jarman.jpg
+Lancaster Hall|483|670|lancaster.jpg
+Lankford Student Union|450|455|lankford.jpg
+Ruffner Hall|310|670|ruffner.jpg
+Small Business Development Center|280|219|business.jpg
+Souther Ruffner Residence Hall|254|650|southruffner.jpg
+Stubbs Residence Hall|619|450|stubbs.jpg
+Jeffers/Stevens/McCorkle Halls|593|560|jeffersmccorkle.jpg
+Longwood Bed And Breckfast|883|697|longwoodinn.jpg
+Visitor Parking|330|810|ruffner.jpg
+Willet Hall|357|335|willett.jpg
+Wygal Hall|435|305|wygal.jpg
