@@ -35,7 +35,7 @@ var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
 var canvasWidth = 940;//$("#canvas").attr('width');
 var canvasHeight = 1024;//$("#canvas").attr('height');
-var gridOn = false;
+var debugOn = true;
 
 var img = new Image();
 var cursor = new Image();
@@ -52,9 +52,13 @@ var Place = function(name,x,y) {
 	this.y = y;
 }
 
+var currentLocation = new Place('',0,0);
+
+/* ------------------Test functions ----------------------*/
 function drawTestGrid(context) {
-	if (gridOn) {
+	if (debugOn) {
 		var offset = 50;
+		context.strokeStyle = "black";
 		for (var i = 0; i < canvasWidth; i+=offset) {
 			context.beginPath();
 			context.moveTo(i,0);
@@ -70,6 +74,16 @@ function drawTestGrid(context) {
 	}
 }
 
+function displayHoverRange(context) {
+	if (debugOn) {
+		context.beginPath();
+		context.lineWidth="2";
+		context.strokeStyle = "red";
+		context.rect(currentLocation.x-12,currentLocation.y-25,50,50);
+		context.stroke();
+	}
+}
+/* -------------------------------------------------------*/
 var locations = Array();
 
 // Not difficult to do using jinja, but for the purposes of this demo, 
@@ -100,7 +114,8 @@ function drawLocation(index) {
 	drawTestGrid(ctx);
 	ctx.fillStyle = "#FF0000";
 	ctx.drawImage(cursor,locations[index].x - 12,locations[index].y - 25,50,50);
-	//ctx.fillRect(locations[index].x,locations[index].y,25,25);
+	currentLocation = locations[index];
+	displayHoverRange(ctx);
 }
 
 $('.left-panel ul li').click(function(e) {
