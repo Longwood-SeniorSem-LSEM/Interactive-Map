@@ -46,13 +46,15 @@ img.onload = function() {
 	drawTestGrid(ctx);
 }
 
-var Place = function(name,x,y) {
+var Place = function(name,x,y,img,info) {
 	this.name = name;
 	this.x = x;
 	this.y = y;
+	this.img = img;
+	this.info = info;
 }
 
-var currentLocation = new Place('',0,0);
+var currentLocation = new Place('',0,0,'','');
 
 /* ------------------Test functions ----------------------*/
 function drawTestGrid(context) {
@@ -83,6 +85,7 @@ function displayHoverRange(context) {
 		context.stroke();
 	}
 }
+
 /* -------------------------------------------------------*/
 var locations = Array();
 
@@ -92,10 +95,10 @@ $.get('canvas.txt', function(data) {
 	var tuples = data.split('\n');
 	for (var i = 0; i < tuples.length - 1; i++) {
 
-		locations.push(new Place(tuples[i].split('|')[0],tuples[i].split('|')[1],tuples[i].split('|')[2]));
+		locations.push(new Place(tuples[i].split('|')[0],tuples[i].split('|')[1],tuples[i].split('|')[2],tuples[i].split('|')[3],tuples[i].split[4]));
 
 		//if (i < (tuples.length - 1) / 2)
-			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
+			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'<sub>[info]</sub></li>');
 /*		else
 			$('.right-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');*/
 	}
@@ -118,7 +121,13 @@ function drawLocation(index) {
 	displayHoverRange(ctx);
 }
 
+function displayInformation(context) {
+	ctx.fillStyle = "#00FF00";
+	ctx.fillRect(600,0,340,300);
+}
+
 $('.left-panel ul li').click(function(e) {
 	drawLocation(ctx);
+	displayInformation(ctx);
 });
 </script>
