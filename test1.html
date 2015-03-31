@@ -53,10 +53,10 @@ var Place = function(name,x,y,src,info) {
 	this.src = img;
 	this.info = info;
 	this.img = new Image();
-	this.img.src = 'Campus_Buildings/alumni.jpg';
+	this.img.src = src;
 }
 
-var currentLocation = new Place('null',0,0,'alumni.jpg','null');
+var currentLocation = new Place('null',0,0,'Campus_Buildings/alumni.jpg','null');
 
 /* ------------------Test functions ----------------------*/
 function drawTestGrid(context) {
@@ -97,7 +97,7 @@ $.get('database/canvas.txt', function(data) {
 	var tuples = data.split('\n');
 	for (var i = 0; i < tuples.length - 1; i++) {
 
-		locations.push(new Place(tuples[i].split('|')[0],tuples[i].split('|')[1],tuples[i].split('|')[2],tuples[i].split('|')[3],tuples[i].split[4]));
+		locations.push(new Place(tuples[i].split('|')[0],tuples[i].split('|')[1],tuples[i].split('|')[2],('Campus_Buildings/'+tuples[i].split('|')[3]),tuples[i].split[4]));
 
 			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
 	}
@@ -111,19 +111,20 @@ function clearScreen(context) {
 
 function drawLocation(index) {
 	console.log('Drawing Location for ' + locations[index].name);
+	currentLocation = locations[index];
 	clearScreen(ctx);
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawTestGrid(ctx);
 	displayInformation(ctx);
 	ctx.fillStyle = "#FF0000";
-	ctx.drawImage(cursor,locations[index].x - 12,locations[index].y - 25,50,50);
-	currentLocation = locations[index];
+	ctx.drawImage(cursor,currentLocation.x - 12,currentLocation.y - 25,50,50);
 	displayHoverRange(ctx);
 }
 
 function displayInformation(context) {
 	ctx.fillStyle = "#00FF00";
 	ctx.fillRect(600,0,340,300);
+	ctx.drawImage(currentLocation.img,650,25,250,100);
 }
 
 $('.left-panel ul li').click(function(e) {
