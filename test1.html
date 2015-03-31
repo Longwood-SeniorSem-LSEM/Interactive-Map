@@ -39,22 +39,24 @@ var debugOn = true;
 
 var img = new Image();
 var cursor = new Image();
-img.src = 'canvas.png';
-cursor.src = 'cursor.png'; 
+img.src = 'maps/canvas.png';
+cursor.src = 'misc/cursor.png'; 
 img.onload = function() {
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawTestGrid(ctx);
 }
 
-var Place = function(name,x,y,img,info) {
+var Place = function(name,x,y,src,info) {
 	this.name = name;
 	this.x = x;
 	this.y = y;
-	this.img = img;
+	this.src = img;
 	this.info = info;
+	this.img = new Image();
+	img.src = 'Campus_Buildings/{0}'.format(this.src);
 }
 
-var currentLocation = new Place('',0,0,'','');
+var currentLocation = new Place('null',0,0,'alumni.jpg','null');
 
 /* ------------------Test functions ----------------------*/
 function drawTestGrid(context) {
@@ -91,18 +93,15 @@ var locations = Array();
 
 // Not difficult to do using jinja, but for the purposes of this demo, 
 // we will fetch database information from a txt file.
-$.get('canvas.txt', function(data) {
+$.get('database/canvas.txt', function(data) {
 	var tuples = data.split('\n');
 	for (var i = 0; i < tuples.length - 1; i++) {
 
 		locations.push(new Place(tuples[i].split('|')[0],tuples[i].split('|')[1],tuples[i].split('|')[2],tuples[i].split('|')[3],tuples[i].split[4]));
 
-		//if (i < (tuples.length - 1) / 2)
-			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'<sub>[info]</sub></li>');
-/*		else
-			$('.right-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');*/
+			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
 	}
-	console.log(locations);	
+	//console.log(locations);	
 });
 
 function clearScreen(context) {
@@ -115,6 +114,7 @@ function drawLocation(index) {
 	clearScreen(ctx);
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawTestGrid(ctx);
+	displayInformation(ctx);
 	ctx.fillStyle = "#FF0000";
 	ctx.drawImage(cursor,locations[index].x - 12,locations[index].y - 25,50,50);
 	currentLocation = locations[index];
