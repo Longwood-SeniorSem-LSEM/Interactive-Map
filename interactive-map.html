@@ -115,10 +115,9 @@ function drawLocation(index) {
 	clearScreen(ctx);
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawTestGrid(ctx);
+	ctx.drawImage(cursor,currentLocation.x - 12,currentLocation.y - 25,50,50);
 	displayInformation(ctx);
 	ctx.fillStyle = "#FF0000";
-	ctx.drawImage(cursor,currentLocation.x - 12,currentLocation.y - 25,50,50);
-	displayHoverRange(ctx);
 }
 
 function displayInformation(context) {
