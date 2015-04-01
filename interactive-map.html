@@ -39,7 +39,7 @@ function wrapText(ctx, text, x, y, maxWidth, textSize) {
 		var testLine = line + words[i] + ' ';
 		var metrics = ctx.measureText(testLine);
 		var testWidth = metrics.width;
-		if (testWidth > maxWidth && n > 0) {
+		if (testWidth > maxWidth && i > 0) {
 			ctx.fillText(line,x,y);
 			line = words[i] + ' ';
 			y += textSize;
@@ -147,7 +147,7 @@ function displayInformation(context) {
 	ctx.drawImage(currentLocation.img,650,25,250,100);
 	ctx.fillStyle = "#000000";
 	//ctx.fillText(currentLocation.info,650,150);
-	wrapText(context, currentLocation.info, 650, 150, 250, 4);
+	wrapText(context, currentLocation.info, 650, 150, 250, 20);
 }
 
 $('.left-panel ul li').click(function(e) {

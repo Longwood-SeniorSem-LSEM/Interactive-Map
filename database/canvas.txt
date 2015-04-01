@@ -1,13 +1,13 @@
 Crafts House|357|810|crafts.jpg|Admissions Office
 Arc Residence Hall|583|350|arc.jpg|Student Housings
-Assessment & Institutional Research|465|245|Assessment.jpg|NULL
+Assessment & Institutional Research|465|245|Assessment.jpg| 
 Tabb Hall|200|664|tabb.jpg|Athletic Department
 Registrar|240|600|barlow.jpg|Registrar
 Baseball Field (Buddy Bolding Stadium)|400|150|buddyboldingstadium.jpg|Baseball Field, Soccor Field
 Bedford Hall|465|285|bedford.jpg|Art, Bedford Auditorium
 Blackwell Hall|310|645|blackwell.jpg|Prince Edward, Virginia rooms
 Bristow Hall|203|420|bristow.jpg|Physical Plant Operations/Materiel Mgmt.
-Center for Communication Studies & Theatre|440|270|communications.jpg|NULL
+Center for Communication Studies & Theatre|440|270|communications.jpg| 
 Chichester Science Center|653|700|chichester.jpg|Natural Sciences
 Wheeler Hall|677|612|wheeler.jpg|Cormier Honors College 
 Coyner Hall|377|530|coyner.jpg|Real Property Management
@@ -21,7 +21,7 @@ Grainger Hall|392|675|grainger.jpg|English, Modern Languages
 Greenwood Library|472|360|greenwood.jpg|Academic Support Center
 Hardy House|265|812|hardy.jpg| Information Technology, Real Property Management
 Health & Fitness Center|310|230|fitness.jpg| Campus Recreation, Counseling Center, Student Health
-Heating Plant|200|550|heatplant.jpg|NULL
+Heating Plant|200|550|heatplant.jpg| 
 Hiner Hall|377|570|hiner.jpg|College of Business & Economics
 Hull Education Center|355|282|hull.jpg|College of Education & Human Services
 Iler Hall|360|475|iler.jpg|Environmental Health & Safety, ROTC
@@ -33,7 +33,7 @@ Small Business Development Center|280|219|business.jpg|Longwood University Real 
 Souther Ruffner Residence Hall|254|650|southruffner.jpg|Student Housing
 Stubbs Residence Hall|619|450|stubbs.jpg|Student Housing
 Jeffers/Stevens/McCorkle Halls|593|560|jeffersmccorkle.jpg|Capital Planning & Construction, Clean VA Waterways/Sustainability, International Affairs, Nursing
-Longwood Bed And Breckfast|883|697|longwoodinn.jpg|NULL
-Visitor Parking|330|810|ruffner.jpg|NULL
+Longwood Bed And Breckfast|883|697|longwoodinn.jpg| 
+Visitor Parking|330|810|ruffner.jpg| 
 Willet Hall|357|335|willett.jpg|Health, Recreation & Kinesiology, Lancer Gymnasium & Pool
 Wygal Hall|435|305|wygal.jpg|Music, Molnar Recital Hall 
