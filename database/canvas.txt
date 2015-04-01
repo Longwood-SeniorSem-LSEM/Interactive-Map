@@ -2,14 +2,13 @@ Crafts House|357|810|crafts.jpg|Admissions Office
 Arc Residence Hall|583|350|arc.jpg|Student Housings
 Assessment & Institutional Research|465|245|Assessment.jpg| 
 Tabb Hall|200|664|tabb.jpg|Athletic Department
-Registrar|240|600|barlow.jpg|Registrar
+Barlow Hall|240|600|barlow.jpg|Registrar
 Baseball Field (Buddy Bolding Stadium)|400|150|buddyboldingstadium.jpg|Baseball Field, Soccor Field
 Bedford Hall|465|285|bedford.jpg|Art, Bedford Auditorium
 Blackwell Hall|310|645|blackwell.jpg|Prince Edward, Virginia rooms
 Bristow Hall|203|420|bristow.jpg|Physical Plant Operations/Materiel Mgmt.
 Center for Communication Studies & Theatre|440|270|communications.jpg| 
 Chichester Science Center|653|700|chichester.jpg|Natural Sciences
-Wheeler Hall|677|612|wheeler.jpg|Cormier Honors College 
 Coyner Hall|377|530|coyner.jpg|Real Property Management
 Cox Residence Hall|650|540|cox.jpg|Student Housing
 Curry Residence Hall|250|315|curry.jpg|Student Housing
@@ -36,4 +35,5 @@ Jeffers/Stevens/McCorkle Halls|593|560|jeffersmccorkle.jpg|Capital Planning & Co
 Longwood Bed And Breckfast|883|697|longwoodinn.jpg| 
 Visitor Parking|330|810|ruffner.jpg| 
 Willet Hall|357|335|willett.jpg|Health, Recreation & Kinesiology, Lancer Gymnasium & Pool
+Wheeler Hall|677|612|wheeler.jpg|Cormier Honors College 
 Wygal Hall|435|305|wygal.jpg|Music, Molnar Recital Hall 
