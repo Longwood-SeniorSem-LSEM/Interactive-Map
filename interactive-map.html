@@ -96,8 +96,8 @@ var locations = Array();
 $.get('database/canvas.txt', function(data) {
 	var tuples = data.split('\n');
 	for (var i = 0; i < tuples.length - 1; i++) {
-
-		locations.push(new Place(tuples[i].split('|')[0],tuples[i].split('|')[1],tuples[i].split('|')[2],('Campus_Buildings/'+tuples[i].split('|')[3]),tuples[i].split[4]));
+		var param = tuples[i].split('|');
+		locations.push(new Place(param[0],param[1],param[2],('Campus_Buildings/'+param[3]),param[4]));
 
 			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
 	}
