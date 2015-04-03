@@ -56,17 +56,18 @@ var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
 var canvasWidth = 940;//$("#canvas").attr('width');
 var canvasHeight = 1024;//$("#canvas").attr('height');
-var debugOn = true;
+var debugOn = false;
 
+// The map image of Longwood's Campus
 var img = new Image();
+
+// The waypoint that is used to specify the location of a campus building
 var cursor = new Image();
+
 img.src = 'maps/canvas.png';
 cursor.src = 'misc/cursor.png'; 
-img.onload = function() {
-	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
-	drawTestGrid(ctx);
-}
 
+// Location object; Includes the name, coordinates, image source, and information about locations at Longwood 
 var Place = function(name,x,y,src,info) {
 	this.name = name;
 	this.x = x;
@@ -77,14 +78,28 @@ var Place = function(name,x,y,src,info) {
 	this.img.src = src;
 }
 
-var currentLocation = new Place('null',0,0,'Campus_Buildings/alumni.jpg','null');
+// Denotes the currently selected map location
+var currentLocation = new Place('null',0,0,'misc/longwoodlancers.png','Select a building by name or from the map');
+
+// When the bg image is initially loaded into memory
+// this set of funtions is run
+img.onload = function() {
+	ctx.scale(.75,.75);
+	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
+	drawTestGrid(ctx);
+	displayInformation(ctx);
+}
 
 /* ------------------Test functions ----------------------*/
+// Functions within this section will only be activated if 'debugOn' is
+// set to 'true'
+
+// Draws a grid that is offset by a special number
 function drawTestGrid(context) {
 	if (debugOn) {
 		var offset = 50;
 		context.strokeStyle = "black";
-		for (var i = 0; i < canvasWidth; i+=offset) {
+		for (var i = 0; i < /*canvasWidth*/ 2000; i+=offset) {
 			context.beginPath();
 			context.moveTo(i,0);
 			context.lineTo(i,canvasHeight);
@@ -93,12 +108,14 @@ function drawTestGrid(context) {
 		for (var i = 0; i < canvasHeight; i+=offset) {
 			context.beginPath();
 			context.moveTo(0,i);
-			context.lineTo(canvasWidth,i);
+			context.lineTo(2000,i);
 			context.stroke();
 		}
 	}
 }
 
+// Indicates the region in which clicking will trigger an object to be
+// activated on the map
 function displayHoverRange(context) {
 	if (debugOn) {
 		context.beginPath();
@@ -110,10 +127,13 @@ function displayHoverRange(context) {
 }
 
 /* -------------------------------------------------------*/
+// This holds an array of Place objects
 var locations = Array();
 
 // Not difficult to do using jinja, but for the purposes of this demo, 
 // we will fetch database information from a txt file.
+
+// Extrapulates data from a txt file and inserts it into a list of objects
 $.get('database/canvas.txt', function(data) {
 	var tuples = data.split('\n');
 	for (var i = 0; i < tuples.length - 1; i++) {
@@ -125,11 +145,13 @@ $.get('database/canvas.txt', function(data) {
 	//console.log(locations);	
 });
 
+// Clears the screen making a blank canvas
 function clearScreen(context) {
 	context.fillStyle = "#FFFFFF";
 	context.fillRect(0,0,canvasWidth, canvasHeight);
 }
 
+// Draws a cursor to the correspong location
 function drawLocation(index) {
 	console.log('Drawing Location for ' + locations[index].name);
 	currentLocation = locations[index];
@@ -141,17 +163,26 @@ function drawLocation(index) {
 	ctx.fillStyle = "#FF0000";
 }
 
+// Displays the image of the currently selected location and and
+// information about the location
 function displayInformation(context) {
+	var x = 800, y = 0, width = 400, height = 400, imgWidth = 350, imgHeight = 150;
+
 	ctx.fillStyle = "#012169";
-	ctx.fillRect(600,0,340,300);
-	ctx.drawImage(currentLocation.img,650,25,250,100);
-	ctx.fillStyle = "#FFFFFF";
+	ctx.fillRect(800,0,450,height);
+	ctx.drawImage(currentLocation.img,x+50,y+25,imgWidth,imgHeight);
+	ctx.fillStyle = "white";
 	//ctx.fillText(currentLocation.info,650,150);
-	wrapText(context, currentLocation.info, 650, 150, 250, 20);
+	ctx.font="20px Verdana";
+	wrapText(context, currentLocation.info, x+50, y+imgHeight+50, imgWidth, 25);
 }
 
 $('.left-panel ul li').click(function(e) {
 	drawLocation(ctx);
 	displayInformation(ctx);
 });
+
+// Draws a Lancer Blue frame around the map
+function drawBorder(context) {
+}
 </script>
