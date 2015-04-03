@@ -56,7 +56,7 @@ var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
 var canvasWidth = 940;//$("#canvas").attr('width');
 var canvasHeight = 1024;//$("#canvas").attr('height');
-var debugOn = false;
+var debugOn = true;
 
 // The map image of Longwood's Campus
 var img = new Image();
@@ -88,6 +88,7 @@ img.onload = function() {
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawTestGrid(ctx);
 	displayInformation(ctx);
+	drawBorder(ctx);
 }
 
 /* ------------------Test functions ----------------------*/
@@ -149,6 +150,7 @@ $.get('database/canvas.txt', function(data) {
 function clearScreen(context) {
 	context.fillStyle = "#FFFFFF";
 	context.fillRect(0,0,canvasWidth, canvasHeight);
+	drawBorder(context);
 }
 
 // Draws a cursor to the correspong location
@@ -160,6 +162,7 @@ function drawLocation(index) {
 	drawTestGrid(ctx);
 	ctx.drawImage(cursor,currentLocation.x - 12,currentLocation.y - 25,50,50);
 	displayInformation(ctx);
+	drawBorder(ctx);
 	ctx.fillStyle = "#FF0000";
 }
 
@@ -179,10 +182,16 @@ function displayInformation(context) {
 
 $('.left-panel ul li').click(function(e) {
 	drawLocation(ctx);
-	displayInformation(ctx);
+	//displayInformation(ctx);
+	//drawBorder(ctx);
 });
 
 // Draws a Lancer Blue frame around the map
 function drawBorder(context) {
+	ctx.fillStyle = "#012169";
+	ctx.fillRect(950,400,300,550);
+	ctx.fillRect(0,900,1000,50);
+	ctx.fillRect(0,0,100,900);
+	ctx.fillRect(100,0,700,100);
 }
 </script>
