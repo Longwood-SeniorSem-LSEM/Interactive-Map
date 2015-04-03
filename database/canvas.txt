@@ -3,7 +3,7 @@ Arc Residence Hall|583|350|arc.jpg|Student Housings
 Assessment & Institutional Research|465|245|Assessment.jpg| 
 Tabb Hall|200|664|tabb.jpg|Athletic Department
 Barlow Hall|240|600|barlow.jpg|Registrar
-Baseball Field (Buddy Bolding Stadium)|400|150|buddyboldingstadium.jpg|Baseball Field, Soccor Field
+Buddy Bolding Stadium|400|150|buddyboldingstadium.jpg|Baseball Field, Soccor Field
 Bedford Hall|465|285|bedford.jpg|Art, Bedford Auditorium
 Blackwell Hall|310|645|blackwell.jpg|Prince Edward, Virginia rooms
 Bristow Hall|203|420|bristow.jpg|Physical Plant Operations/Materiel Mgmt.
@@ -14,7 +14,7 @@ Cox Residence Hall|650|540|cox.jpg|Student Housing
 Curry Residence Hall|250|315|curry.jpg|Student Housing
 Dorrill Dining Hall|350|450|dorrill.jpg| Campus Police & Public Safety, Information & Visitor Center
 Frazer Residence Hall|255|270|frazer.jpg|Student Housing
-French Hall(HelpDesk)|133|680|french.jpg|Information Technology, HelpDesk & Radio Statioi
+French Hall|133|680|french.jpg|Information Technology, HelpDesk & Radio Statioi
 Graham Hall|285|565|graham.jpg|Disability Support Services, Parking, Printing Services
 Grainger Hall|392|675|grainger.jpg|English, Modern Languages
 Greenwood Library|472|360|greenwood.jpg|Academic Support Center
