@@ -10,6 +10,14 @@
 	<td>
 	<div class="panel-container">
 		<div class="left-panel">
+			Display: 
+			<select>
+				<option value="all">All Buildings</option>
+				<option value="admin">Administrative</option>
+				<option value="residence">Residence Halls</option>
+				<option value="academic">Academic</option>
+				<option value="misc">Miscellaneous</option>
+			</select>
 			<ul>
 			</ul>
 		</div>
@@ -68,7 +76,7 @@ img.src = 'maps/canvas.png';
 cursor.src = 'misc/cursor.png'; 
 
 // Location object; Includes the name, coordinates, image source, and information about locations at Longwood 
-var Place = function(name,x,y,src,info) {
+var Place = function(name,x,y,src,info,type) {
 	this.name = name;
 	this.x = x;
 	this.y = y;
@@ -76,10 +84,11 @@ var Place = function(name,x,y,src,info) {
 	this.info = info;
 	this.img = new Image();
 	this.img.src = src;
+	this.type = type;
 }
 
 // Denotes the currently selected map location
-var currentLocation = new Place('null',0,0,'misc/longwoodlancers.png','Select a building by name or from the map');
+var currentLocation = new Place('null',0,0,'misc/longwoodlancers.png','Select a building by name or from the map','null');
 
 // When the bg image is initially loaded into memory
 // this set of funtions is run
@@ -140,12 +149,21 @@ $.get('database/canvas.txt', function(data) {
 	tuples.sort();
 	for (var i = 0; i < tuples.length - 1; i++) {
 		var param = tuples[i].split('|');
-		locations.push(new Place(param[0],param[1],param[2],('Campus_Buildings/'+param[3]),param[4]));
+		locations.push(new Place(param[0],param[1],param[2],('Campus_Buildings/'+param[3]),param[4],param[5]));
 
 			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
 	}
 	//console.log(locations);	
 });
+
+// Puts information from specified data structure into list
+function createBuildingList(type) {
+	for (var i = 0; i < locations.length; i++) {
+		if ((type != "all" && type == locations[i].type) || type == "all") {
+			$('.left-panel ul').append('<li onclick="drawLocation('+i+')">'+locations[i].name+'</li>');
+		}
+	}
+}
 
 // Clears the screen making a blank canvas
 function clearScreen(context) {
@@ -173,12 +191,13 @@ function displayInformation(context) {
 	var x = 800, y = 0, width = 400, height = 400, imgWidth = 350, imgHeight = 150;
 
 	ctx.fillStyle = "#012169";
-	ctx.fillRect(800,0,450,height);
-	ctx.drawImage(currentLocation.img,x+50,y+25,imgWidth,imgHeight);
+	ctx.fillRect(x,y,450,height);
+	ctx.drawImage(currentLocation.img,x+50,y+100,imgWidth,imgHeight);
 	ctx.fillStyle = "white";
-	//ctx.fillText(currentLocation.info,650,150);
+	//ctx.font="25px Verdana";
+	//ctx.fillText(currentLocation.name,x+50, y+imgHeight+125);
 	ctx.font="20px Verdana";
-	wrapText(context, currentLocation.info, x+50, y+imgHeight+50, imgWidth, 25);
+	wrapText(context, currentLocation.info, x+50, y+imgHeight+150, imgWidth, 25);
 }
 
 $('.left-panel ul li').click(function(e) {
@@ -204,4 +223,16 @@ function drawBorder(context) {
 	ctx.arc(900,550,50,1*Math.PI,2*Math.PI);
 	ctx.fill();
 }
+
+// Clear left panel list
+function clearList() {
+	$('.left-panel ul').empty();
+}
+
+// When a new order criteria is clicked, rearranges the items in the list
+$("select").change(function() {
+	clearList();
+	console.log($(this).val());
+	createBuildingList($(this).val());
+}).trigger("change");
 </script>

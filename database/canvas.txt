@@ -1,39 +1,39 @@
-Crafts House|357|810|crafts.jpg|Admissions Office
-Arc Residence Hall|583|350|arc.jpg|Student Housings
-Assessment & Institutional Research|465|245|Assessment.jpg| 
-Tabb Hall|200|664|tabb.jpg|Athletic Department
-Barlow Hall|240|600|barlow.jpg|Registrar
-Buddy Bolding Stadium|400|150|buddyboldingstadium.jpg|Baseball Field, Soccor Field
-Bedford Hall|465|285|bedford.jpg|Art, Bedford Auditorium
-Blackwell Hall|310|645|blackwell.jpg|Prince Edward, Virginia rooms
-Bristow Hall|203|420|bristow.jpg|Physical Plant Operations/Materiel Mgmt.
-Center for Communication Studies & Theatre|440|270|communications.jpg| 
-Chichester Science Center|653|700|chichester.jpg|Natural Sciences
-Coyner Hall|377|530|coyner.jpg|Real Property Management
-Cox Residence Hall|650|540|cox.jpg|Student Housing
-Curry Residence Hall|250|315|curry.jpg|Student Housing
-Dorrill Dining Hall|350|450|dorrill.jpg| Campus Police & Public Safety, Information & Visitor Center
-Frazer Residence Hall|255|270|frazer.jpg|Student Housing
-French Hall|133|680|french.jpg|Information Technology, HelpDesk & Radio Statioi
-Graham Hall|285|565|graham.jpg|Disability Support Services, Parking, Printing Services
-Grainger Hall|392|675|grainger.jpg|English, Modern Languages
-Greenwood Library|472|360|greenwood.jpg|Academic Support Center
-Hardy House|265|812|hardy.jpg| Information Technology, Real Property Management
-Health & Fitness Center|310|230|fitness.jpg| Campus Recreation, Counseling Center, Student Health
-Heating Plant|200|550|heatplant.jpg| 
-Hiner Hall|377|570|hiner.jpg|College of Business & Economics
-Hull Education Center|355|282|hull.jpg|College of Education & Human Services
-Iler Hall|360|475|iler.jpg|Environmental Health & Safety, ROTC
-Jarman Hall|580|695|jarman.jpg|Jarman Auditorium
-Lancaster Hall|483|670|lancaster.jpg| Academic Advising/Career Center, Administration, Office of the President, Alumni Office, Cashier/Student Accounts, Financial Aid, Human Resources, Student Aairs/Housing, University Advancement
-Lankford Student Union|450|455|lankford.jpg|Lancer Café, Post Office
-Ruffner Hall|310|670|ruffner.jpg| Academic Aairs, Cook-Cole College of Arts & Sciences,  History, Political Science & Philosophy, Liberal Studies, Mathematics & Computer Science, Psychology, Sociology, Anthropology & Criminal Justice, Cormier Honors Program, Graduate Studies
-Small Business Development Center|280|219|business.jpg|Longwood University Real Estate Foundation
-Souther Ruffner Residence Hall|254|650|southruffner.jpg|Student Housing
-Stubbs Residence Hall|619|450|stubbs.jpg|Student Housing
-Jeffers/Stevens/McCorkle Halls|593|560|jeffersmccorkle.jpg|Capital Planning & Construction, Clean VA Waterways/Sustainability, International Affairs, Nursing
-Longwood Bed And Breckfast|883|697|longwoodinn.jpg| 
-Visitor Parking|330|810|ruffner.jpg| 
-Willet Hall|357|335|willett.jpg|Health, Recreation & Kinesiology, Lancer Gymnasium & Pool
-Wheeler Hall|677|612|wheeler.jpg|Cormier Honors College 
-Wygal Hall|435|305|wygal.jpg|Music, Molnar Recital Hall 
+Crafts House|357|810|crafts.jpg|Admissions Office|admin
+Arc Residence Hall|583|350|arc.jpg|Student Housings|residence
+Assessment & Institutional Research|465|245|Assessment.jpg||academic 
+Tabb Hall|200|664|tabb.jpg|Athletic Department|academic
+Barlow Hall|240|600|barlow.jpg|Registrar|admin
+Buddy Bolding Stadium|400|150|buddyboldingstadium.jpg|Baseball Field, Soccor Field|misc
+Bedford Hall|465|285|bedford.jpg|Art, Bedford Auditorium|academic
+Blackwell Hall|310|645|blackwell.jpg|Prince Edward, Virginia rooms|misc
+Bristow Hall|203|420|bristow.jpg|Physical Plant Operations/Materiel Mgmt.|misc
+Center for Communication Studies & Theatre|440|270|communications.jpg||academic
+Chichester Science Center|653|700|chichester.jpg|Natural Sciences|academic
+Coyner Hall|377|530|coyner.jpg|Real Property Management|academic
+Cox Residence Hall|650|540|cox.jpg|Student Housing|residence
+Curry Residence Hall|250|315|curry.jpg|Student Housing|residence
+Dorrill Dining Hall|350|450|dorrill.jpg| Campus Police & Public Safety, Information & Visitor Center|misc
+Frazer Residence Hall|255|270|frazer.jpg|Student Housing|residence
+French Hall|133|680|french.jpg|Information Technology, HelpDesk & Radio Station|admin
+Graham Hall|285|565|graham.jpg|Disability Support Services, Parking, Printing Services|misc
+Grainger Hall|392|675|grainger.jpg|English, Modern Languages|residence
+Greenwood Library|472|360|greenwood.jpg|Academic Support Center|misc
+Hardy House|265|812|hardy.jpg| Information Technology, Real Property Management|admin
+Health & Fitness Center|310|230|fitness.jpg| Campus Recreation, Counseling Center, Student Health|academic
+Heating Plant|200|550|heatplant.jpg||misc 
+Hiner Hall|377|570|hiner.jpg|College of Business & Economics|academic
+Hull Education Center|355|282|hull.jpg|College of Education & Human Services|academic
+Iler Hall|360|475|iler.jpg|Environmental Health & Safety, ROTC|academic
+Jarman Hall|580|695|jarman.jpg|Jarman Auditorium|academic
+Lancaster Hall|483|670|lancaster.jpg| Academic Advising/Career Center, Administration, Office of the President, Alumni Office, Cashier/Student Accounts, Financial Aid, Human Resources, Student Aairs/Housing, University Advancement|admin
+Lankford Student Union|450|455|lankford.jpg|Lancer Café, Post Office|misc
+Ruffner Hall|310|670|ruffner.jpg| Academic Aairs, Cook-Cole College of Arts & Sciences,  History, Political Science & Philosophy, Liberal Studies, Mathematics & Computer Science, Psychology, Sociology, Anthropology & Criminal Justice, Cormier Honors Program, Graduate Studies|academic
+Small Business Development Center|280|219|business.jpg|Longwood University Real Estate Foundation|academic
+Souther Ruffner Residence Hall|254|650|southruffner.jpg|Student Housing|residence
+Stubbs Residence Hall|619|450|stubbs.jpg|Student Housing|residence
+Jeffers/Stevens/McCorkle Halls|593|560|jeffersmccorkle.jpg|Capital Planning & Construction, Clean VA Waterways/Sustainability, International Affairs, Nursing|academic
+Longwood Bed And Breckfast|883|697|longwoodinn.jpg||misc 
+Visitor Parking|330|810|ruffner.jpg||misc 
+Willet Hall|357|335|willett.jpg|Health, Recreation & Kinesiology, Lancer Gymnasium & Pool|academic
+Wheeler Hall|677|612|wheeler.jpg|Cormier Honors College|residence
+Wygal Hall|435|305|wygal.jpg|Music, Molnar Recital Hall|academic 
