@@ -137,6 +137,7 @@ var locations = Array();
 // Extrapulates data from a txt file and inserts it into a list of objects
 $.get('database/canvas.txt', function(data) {
 	var tuples = data.split('\n');
+	tuples.sort();
 	for (var i = 0; i < tuples.length - 1; i++) {
 		var param = tuples[i].split('|');
 		locations.push(new Place(param[0],param[1],param[2],('Campus_Buildings/'+param[3]),param[4]));
@@ -193,5 +194,14 @@ function drawBorder(context) {
 	ctx.fillRect(0,900,1000,50);
 	ctx.fillRect(0,0,100,900);
 	ctx.fillRect(100,0,700,100);
+
+	ctx.fillRect(900,450,50,100);
+	ctx.beginPath();
+	ctx.arc(900,400,100,0*Math.PI,1*Math.PI);
+	ctx.fill();
+	ctx.fillStyle = "#FFFFFF";
+	ctx.beginPath();
+	ctx.arc(900,550,50,1*Math.PI,2*Math.PI);
+	ctx.fill();
 }
 </script>
