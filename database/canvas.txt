@@ -25,7 +25,7 @@ Hiner Hall|377|570|hiner.jpg|College of Business & Economics|academic
 Hull Education Center|355|282|hull.jpg|College of Education & Human Services|academic
 Iler Hall|360|475|iler.jpg|Environmental Health & Safety, ROTC|academic
 Jarman Hall|580|695|jarman.jpg|Jarman Auditorium|academic
-Lancaster Hall|483|670|lancaster.jpg| Academic Advising/Career Center, Administration, Office of the President, Alumni Office, Cashier/Student Accounts, Financial Aid, Human Resources, Student Aairs/Housing, University Advancement|admin
+Lancaster Hall|483|670|lancaster.jpg| Academic Advising/Career Center, Administration, Office of the President, Alumni Office, Cashier/Student Accounts, Financial Aid, Human Resources, Student Affairs/Housing, University Advancement|admin
 Lankford Student Union|450|455|lankford.jpg|Lancer Café, Post Office|misc
 Ruffner Hall|310|670|ruffner.jpg| Academic Aairs, Cook-Cole College of Arts & Sciences,  History, Political Science & Philosophy, Liberal Studies, Mathematics & Computer Science, Psychology, Sociology, Anthropology & Criminal Justice, Cormier Honors Program, Graduate Studies|academic
 Small Business Development Center|280|219|business.jpg|Longwood University Real Estate Foundation|academic
