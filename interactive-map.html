@@ -197,9 +197,9 @@ function displayInformation(context) {
 	ctx.drawImage(currentLocation.img,x+50,y+110,imgWidth,imgHeight);
 	ctx.fillStyle = "white";
 	//ctx.font="25px Verdana";
-	ctx.font="bold 20px Verdana";
+	ctx.font="bold 1em Verdana";
 	ctx.fillText(currentLocation.name,x+50, y+imgHeight+140);
-	ctx.font="20px Verdana";
+	ctx.font="1em Verdana";
 	wrapText(context, currentLocation.info, x+50, y+imgHeight+160, imgWidth, 25);
 }
 
