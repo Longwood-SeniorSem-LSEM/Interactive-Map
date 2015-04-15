@@ -64,7 +64,7 @@ var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
 var canvasWidth = 940;//$("#canvas").attr('width');
 var canvasHeight = 1024;//$("#canvas").attr('height');
-var debugOn = false;
+var debugOn = true;
 
 // The map image of Longwood's Campus
 var img = new Image();
@@ -95,7 +95,7 @@ var currentLocation = new Place('',0,0,'misc/longwoodlancers.png','Select a buil
 img.onload = function() {
 	ctx.scale(.75,.75);
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
-	drawTestGrid(ctx);
+	drawDebugInfo(ctx);
 	displayInformation(ctx);
 	drawBorder(ctx);
 }
@@ -126,14 +126,21 @@ function drawTestGrid(context) {
 
 // Indicates the region in which clicking will trigger an object to be
 // activated on the map
-function displayHoverRange(context) {
+function displayClickRange(context) {
 	if (debugOn) {
-		context.beginPath();
-		context.lineWidth="2";
-		context.strokeStyle = "red";
-		context.rect(currentLocation.x-12,currentLocation.y-25,50,50);
-		context.stroke();
+		for (var i = 0; i < locations.length; i++) {
+			context.beginPath();
+			context.lineWidth="2";
+			context.strokeStyle = "red";
+			context.rect(locations[i].x-12,locations[i].y-25,50,50);
+			context.stroke();
+		}
 	}
+}
+
+function drawDebugInfo(context) {
+	drawTestGrid(context);
+	displayClickRange(context);
 }
 
 /* -------------------------------------------------------*/
@@ -178,7 +185,7 @@ function drawLocation(index) {
 	currentLocation = locations[index];
 	clearScreen(ctx);
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
-	drawTestGrid(ctx);
+	drawDebugInfo(ctx);
 	ctx.drawImage(cursor,currentLocation.x - 12,currentLocation.y - 25,50,50);
 	drawBorder(ctx);
 	displayInformation(ctx);
@@ -235,7 +242,40 @@ function clearList() {
 // When a new order criteria is clicked, rearranges the items in the list
 $("select").change(function() {
 	clearList();
-	console.log($(this).val());
 	createBuildingList($(this).val());
 }).trigger("change");
+
+function getMousePos(canvas, evt) {
+	var rect = canvas.getBoundingClientRect(), root = document.documentElement;
+	var mouseX = evt.clientX - rect.left - root.scrollLeft;
+	var mouseY = evt.clientY - rect.top - root.scrollTop;
+	return {
+		x: mouseX,
+		y: mouseY
+	};
+}
+
+function inClickRange(evt,index) {
+	mousePos = getMousePos(canvas,evt);
+	var x1 = locations[index].x;
+	var y1 = locations[index].y;
+	var x2 = mousePos.x / .75;
+	var y2 = mousePos.y / .75;
+	console.log(index);
+	console.log("x1="+x1+":x2="+x2+":y1="+y1+"y2="+y2+"\n");
+	return (x1 < x2) && ((x1+50) > x2) && (y1 < y2) && ((y1+50) > y2);
+}
+
+$("canvas").click(function(e) {
+	ctx.fillStyle = "purple";
+	ctx.fillRect(getMousePos(canvas,e).x / .75, getMousePos(canvas,e).y / .75, 10, 10);
+	for (var i = 0; i < locations.length; i++) {
+		console.log("X: " + getMousePos(canvas,e).x / .75 + "; Y: " + (getMousePos(canvas,e).y / .75));
+		console.log(inClickRange(e,i));
+		if (inClickRange(e,i)) {
+			drawLocation(i);
+			break;
+		}
+	}
+});
 </script>
