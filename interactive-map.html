@@ -38,7 +38,7 @@
 </html>
 
 <script>
-
+// this is waping any overflow text under the building picture
 function wrapText(ctx, text, x, y, maxWidth, textSize) {
 	var words = text.split(' ');
 	var line = '';
@@ -205,9 +205,11 @@ function displayInformation(context) {
 	ctx.fillStyle = "white";
 	//ctx.font="25px Verdana";
 	ctx.font="bold 1em Verdana";
-	ctx.fillText(currentLocation.name,x+50, y+imgHeight+140);
+   //TODO Wrap text on CTXFILL
+	wrapText(context, currentLocation.name, x+50, y+imgHeight+140, imgWidth, 25);
+//	ctx.fillText(currentLocation.name,x+50, y+imgHeight+140);
 	ctx.font="1em Verdana";
-	wrapText(context, currentLocation.info, x+50, y+imgHeight+160, imgWidth, 25);
+	wrapText(context, currentLocation.info, x+50, y+imgHeight+180, imgWidth, 25);
 }
 
 $('.left-panel ul li').click(function(e) {
