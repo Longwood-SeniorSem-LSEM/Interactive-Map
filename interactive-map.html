@@ -4,8 +4,23 @@
 	<link rel="stylesheet" type="type/css" href="map.css">
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
-<body>
-	<table>
+<div id="container"style="background-color:#0A1F3d">   
+   <h1>Lancer Quest</h1>
+   <!-- Navigation Bar -->
+   <div id="nav">
+   <ul>
+          <li><a href="http://www.longwood.edu">Longwood Homepage</a></li>
+          <li><a href="https://my.longwood.edu">My Longwood</a></li>
+          <li><a href="https://canvas.longwood.edu">Canvas</a></li>
+          <li><a href="http://www.outlook.com/longwood.edu">Outlook</a></li>
+          <li id="search">
+                <input type="text"></input>
+                <input type="submit" value="Search"></input>
+          </li>
+    </ul>
+    </div>
+    <body>
+ 	<table>
 	<tr>
 	<td>
 	<div class="panel-container">
@@ -35,6 +50,7 @@
 	-->
 	</tr>
 </body>
+	</div>
 </html>
 
 <script>
@@ -64,7 +80,7 @@ var bg = canvas.getContext("2d");
 var ctx = canvas.getContext("2d");
 var canvasWidth = 940;//$("#canvas").attr('width');
 var canvasHeight = 1024;//$("#canvas").attr('height');
-var debugOn = true;
+var debugOn = false;
 
 // The map image of Longwood's Campus
 var img = new Image();
@@ -94,6 +110,8 @@ var currentLocation = new Place('',0,0,'misc/longwoodlancers.png','Select a buil
 // this set of funtions is run
 img.onload = function() {
 	ctx.scale(.75,.75);
+	ctx.fillStyle = "#FFFFFF";
+	ctx.fillRect(100,100,890,880);
 	bg.drawImage(img,0,0,canvasWidth,canvasHeight);
 	drawDebugInfo(ctx);
 	displayInformation(ctx);
@@ -175,7 +193,7 @@ function createBuildingList(type) {
 // Clears the screen making a blank canvas
 function clearScreen(context) {
 	context.fillStyle = "#FFFFFF";
-	context.fillRect(0,0,canvasWidth, canvasHeight);
+	context.fillRect(0,0,canvasWidth-100, canvasHeight-160);
 	drawBorder(context);
 }
 
@@ -197,7 +215,7 @@ function drawLocation(index) {
 function displayInformation(context) {
 	var x = 800, y = 0, width = 400, height = 400, imgWidth = 350, imgHeight = 150;
 
-	ctx.fillStyle = "#012169";
+	ctx.fillStyle = "#0A1F3D";
 	ctx.fillRect(x,y,450,height);
 	ctx.fillStyle = "gray";
 	ctx.fillRect(x+40, y+100, imgWidth+20,170);
@@ -205,7 +223,6 @@ function displayInformation(context) {
 	ctx.fillStyle = "white";
 	//ctx.font="25px Verdana";
 	ctx.font="bold 1em Verdana";
-   //TODO Wrap text on CTXFILL
 	wrapText(context, currentLocation.name, x+50, y+imgHeight+140, imgWidth, 25);
 //	ctx.fillText(currentLocation.name,x+50, y+imgHeight+140);
 	ctx.font="1em Verdana";
@@ -220,7 +237,7 @@ $('.left-panel ul li').click(function(e) {
 
 // Draws a Lancer Blue frame around the map
 function drawBorder(context) {
-	ctx.fillStyle = "#012169";
+	ctx.fillStyle = "#0A1F3D";
 	ctx.fillRect(950,400,300,550);
 	ctx.fillRect(0,900,1000,50);
 	ctx.fillRect(0,0,100,900);
@@ -242,7 +259,7 @@ function clearList() {
 }
 
 // When a new order criteria is clicked, rearranges the items in the list
-$("select").change(function() {
+/*$("select").change(function() {
 	clearList();
 	createBuildingList($(this).val());
 }).trigger("change");
@@ -279,5 +296,5 @@ $("canvas").click(function(e) {
 			break;
 		}
 	}
-});
+});*/
 </script>
